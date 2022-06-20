@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 3 Openclassrooms sass ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woengus/ohmyfood.git"
+  },
+  "author": "Olivier Biard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woengus/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/woengus/ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.52.3"
+  }
+}
