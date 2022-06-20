@@ -66,6 +66,7 @@ header {
 }
 
 .functionning {
+  counter-reset: steps;
   padding: 1rem 2rem;
   background-color: white;
 }
@@ -73,20 +74,47 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  list-style-type: none; /*enlève les nombres par défaut de l'ol*/
+  padding-left: 0px;
 }
 .functionning li {
+  position: relative;
   background-color: #f6f6f6;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border-radius: 1rem;
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
+  min-width: 200px;
   box-shadow: 0px 3px 3px 1px #A9A9A9;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   transition: all 150ms;
+}
+.functionning li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -0.75rem;
+  bottom: 0.75rem;
 }
 .functionning li:hover {
   transform: scale(1.03);
+}
+.functionning i {
+  color: #7e7e7e;
+  margin-right: 1rem;
+  padding-left: 0px;
+}
+.functionning .fa-store {
+  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */
