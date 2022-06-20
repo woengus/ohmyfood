@@ -16,7 +16,7 @@
     "url": "https://github.com/woengus/ohmyfood/issues"
   },
   "homepage": "https://github.com/woengus/ohmyfood#readme",
-  "dependencies": {
+  "devDependencies": {
     "sass": "^1.52.3"
   }
 }
