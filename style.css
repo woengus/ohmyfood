@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');/*import de la fond shrikhand*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); /*roboto*/
+*, ::before, ::after {
+    box-sizing: border-box; /*bordure à l'intérieur de l'élément, éviter les soucis avec la marge*/
+}
+body {
+    margin:0px; /*elnève la marge par défaut de body*/
+}
+header {
+    font-family: 'Shrikhand', cursive;
+    text-align: center;
+    padding: 0.2rem;
+
+    box-shadow:0px 3px 3px 1px lightgrey;
+}
