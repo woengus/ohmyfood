@@ -1,0 +1,22 @@
+@use "../utils/colors.scss";
+@use "../base.scss";
+footer {
+    background-color: colors.$light-black;
+    color: colors.$white;
+    padding-left:2rem;
+    a {
+        text-decoration: none;
+        color: colors.$white;
+    }
+    address {
+        font-style: normal; /*enlève l'italique*/
+    }
+    h2 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 300;
+        padding-top:1rem;
+    }
+    i {
+        margin-right:0.3rem;
+    }
+}
