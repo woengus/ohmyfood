@@ -1,5 +1,6 @@
+@use "../utils/colors.scss";
 .city {
-    background-color: #eaeaea;
+    background-color: colors.$middle-gray;
     padding: 0.5rem;
     display: flex;
     align-items: center;

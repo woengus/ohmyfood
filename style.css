@@ -80,6 +80,7 @@ header {
 }
 .functionning li {
   position: relative;
+  flex-wrap: wrap;
   background-color: #f6f6f6;
   text-align: center;
   padding: 1rem 1.5rem;
@@ -97,7 +98,7 @@ header {
   content: counter(steps);
   counter-increment: steps;
   color: white;
-  background-color: #9356dc;
+  background-color: #9356DC;
   border-radius: 50%;
   width: 1.5rem;
   height: 1.5rem;
@@ -118,9 +119,9 @@ header {
   padding-left: 0px;
 }
 .functionning .fa-store {
-  color: #9356dc;
+  color: #9356DC;
 }
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .functionning ol {
     flex-direction: column;
   }
