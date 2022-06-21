@@ -150,7 +150,9 @@ header {
 }
 .menus .card .location {
   margin-left: 1rem;
-  padding-bottom: 1rem;
+}
+.menus .card p {
+  margin-top: 0px;
 }
 .menus .card a {
   text-decoration: none;
@@ -160,6 +162,13 @@ header {
   background-color: white;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+.menus .card .flex-location-i {
+  display: flex;
+  justify-content: space-between;
+}
+.menus .card i {
+  margin-right: 1rem;
 }
 .menus .card-image {
   width: 100%;
@@ -173,6 +182,26 @@ header {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-around;
+  /*création de la class .new pour facilement la mettre sur la card que l'on souhaite*/
+}
+.menus .menus-cards .new {
+  position: relative;
+}
+.menus .menus-cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  color: #1b6150;
+  font-weight: bold;
+  border-radius: 2px;
+  text-align: center;
+  /*pour centrer le texte verticalement et horizontalement*/
+  display: grid;
+  place-items: center;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  right: 1rem;
+  top: 1rem;
 }
 .menus h2 {
   margin-bottom: 2rem;
