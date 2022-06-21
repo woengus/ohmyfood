@@ -1,3 +1,6 @@
 @mixin base-shadow {
     box-shadow: 0px 3px 3px 1px #A9A9A9;
 }
+@mixin strong-shadow {
+    box-shadow: 0px 3px 3px 1px grey;
+}

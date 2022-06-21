@@ -3,7 +3,7 @@
 @use "../utils/colors.scss";
 .functionning {
     counter-reset: steps;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     background-color: colors.$white;
 
     ol {
@@ -15,9 +15,10 @@
     }
 
     li {
-        position: relative;
+        position: relative; /*essentiel si l'enfant est en absolute*/
         &::before {
-            content: counter(steps);
+            /*pour créer les chiffres devant les li*/
+            content: counter(steps); 
             counter-increment: steps;
             color:colors.$white;
             background-color:colors.$primaire;
@@ -27,7 +28,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: absolute;
+            /*positionnement des chiffres*/
+            position: absolute; 
             left:-0.75rem;
             bottom: 0.75rem;
         }
@@ -39,14 +41,16 @@
         margin-left: auto;
         margin-right: auto;
         font-weight: bold;
-        min-width: 260px;
+        min-width: 280px;
+        max-width: 360px;
         width: 50%;
         @include box-shadow.base-shadow;
         font-size: 1rem;
         transition: all 150ms; 
         &:hover {
-            @include hover-zoom.zoom;
+            /*@include hover-zoom.zoom;*/
             background-color: colors.$light-purple;
+            @include box-shadow.strong-shadow; 
         }
         
     }
@@ -58,10 +62,10 @@
     .fa-store {
         color: colors.$primaire;
     }
-    @media (max-width: 860px) {
+    @media (max-width: 905px) {
         ol {
             flex-direction: column;
         }
     }
-    
+
 }
