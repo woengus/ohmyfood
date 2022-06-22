@@ -4,6 +4,13 @@
     background-color: colors.$light-gray;
     padding-bottom: 2rem;
 
+    .fas {
+        color:transparent;
+        background-image: linear-gradient(colors.$primaire,colors.$secondaire);
+        background-clip: text;
+      
+     }
+
     .card {
         height: 12rem;
         min-width: 18rem;
@@ -19,6 +26,7 @@
 
         .location {
             margin-left: 1rem;
+            position: absolute;
         }
 
         p {
@@ -31,17 +39,20 @@
         }
 
         .card-description {
+            position: relative;
             background-color: colors.$white;
             border-bottom-left-radius: 1rem;
-            border-bottom-right-radius: 1rem;
+            border-bottom-right-radius: 1rem; 
         }
-        .flex-location-i {
-            display: flex;
-            justify-content: space-between;
-        }
+
         i {
-            margin-right:1rem;
+            /*margin-right:1rem;*/
+            position: absolute;
+            right: 1rem;
+            top:0.5rem;
+            font-size: 1.5rem;
         }
+
     }
 
     .card-image {
@@ -85,4 +96,5 @@
         margin-bottom: 2rem;
         padding-left: 1rem;
     }
+  
 }

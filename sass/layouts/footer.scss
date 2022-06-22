@@ -19,6 +19,9 @@ footer {
     i {
         margin-right:0.3rem;
     }
+    p{
+        width: 20%;
+    }
     .footer-flex {
         display:flex;
         flex-direction: row;
@@ -31,8 +34,5 @@ footer {
                 width: 100%;
             }
         }
-    }
-    p{
-        width: 20%;
     }
 }

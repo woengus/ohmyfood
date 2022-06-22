@@ -49,7 +49,9 @@ header {
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
   border-radius: 30px;
   height: 3rem;
-  width: 75%;
+  width: 50%;
+  max-width: 400px;
+  min-width: 280px;
   color: white;
   font-size: 1rem;
   padding: 0 20px;
@@ -136,6 +138,11 @@ header {
   background-color: #f6f6f6;
   padding-bottom: 2rem;
 }
+.menus .fas {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+}
 .menus .card {
   height: 12rem;
   min-width: 18rem;
@@ -150,6 +157,7 @@ header {
 }
 .menus .card .location {
   margin-left: 1rem;
+  position: absolute;
 }
 .menus .card p {
   margin-top: 0px;
@@ -159,16 +167,17 @@ header {
   color: black;
 }
 .menus .card .card-description {
+  position: relative;
   background-color: white;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
-.menus .card .flex-location-i {
-  display: flex;
-  justify-content: space-between;
-}
 .menus .card i {
-  margin-right: 1rem;
+  /*margin-right:1rem;*/
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
 }
 .menus .card-image {
   width: 100%;
@@ -228,6 +237,9 @@ footer h2 {
 footer i {
   margin-right: 0.3rem;
 }
+footer p {
+  width: 20%;
+}
 footer .footer-flex {
   display: flex;
   flex-direction: row;
@@ -242,9 +254,6 @@ footer .footer-flex {
   footer .footer-flex p {
     width: 100%;
   }
-}
-footer p {
-  width: 20%;
 }
 
 /*# sourceMappingURL=style.css.map */
