@@ -270,13 +270,13 @@ img {
   max-width: 100%;
 }
 
-main {
+.main_restaurant {
   position: relative;
   top: -3.5rem;
   background-color: transparent;
 }
 
-main h2 {
+.page_h2 {
   font-style: italic;
   font-family: "Shrikhand", cursive;
   background-color: white;
