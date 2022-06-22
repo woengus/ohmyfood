@@ -51,6 +51,9 @@
             /*@include hover-zoom.zoom;*/
             background-color: colors.$light-purple;
             @include box-shadow.strong-shadow; 
+            i {
+                color: colors.$primaire;
+            }
         }
         
     }
@@ -59,9 +62,7 @@
         margin-right: 1rem;
         padding-left: 0px;
     }
-    .fa-store {
-        color: colors.$primaire;
-    }
+   
     @media (max-width: 905px) {
         ol {
             flex-direction: column;

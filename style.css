@@ -118,13 +118,13 @@ header {
   background-color: #f5edff;
   box-shadow: 0px 3px 3px 1px grey;
 }
+.functionning li:hover i {
+  color: #9356DC;
+}
 .functionning i {
   color: #7e7e7e;
   margin-right: 1rem;
   padding-left: 0px;
-}
-.functionning .fa-store {
-  color: #9356DC;
 }
 @media (max-width: 905px) {
   .functionning ol {
