@@ -8,8 +8,19 @@
         color:transparent;
         background-image: linear-gradient(colors.$primaire,colors.$secondaire);
         background-clip: text;
-      
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    
+        &:hover {
+            opacity: 1;
+            
+        }
+       
      }
+     /*fait disparaitre le .far au hover pour éviter une légère bordure noire*/
+     .far:hover {
+        opacity: 0;
+    }
 
     .card {
         height: 12rem;
