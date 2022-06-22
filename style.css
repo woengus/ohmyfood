@@ -228,5 +228,23 @@ footer h2 {
 footer i {
   margin-right: 0.3rem;
 }
+footer .footer-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+@media (max-width: 671px) {
+  footer .footer-flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer .footer-flex p {
+    width: 100%;
+  }
+}
+footer p {
+  width: 20%;
+}
 
 /*# sourceMappingURL=style.css.map */
