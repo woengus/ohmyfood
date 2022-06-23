@@ -137,7 +137,6 @@ header {
 .menus {
   background-color: #f6f6f6;
   padding-bottom: 2rem;
-  /*fait disparaitre le .far au hover pour éviter une légère bordure noire*/
 }
 .menus .fas {
   color: transparent;
@@ -148,9 +147,6 @@ header {
 }
 .menus .fas:hover {
   opacity: 1;
-}
-.menus .far:hover {
-  opacity: 0;
 }
 .menus .card {
   height: 12rem;
@@ -304,9 +300,24 @@ i {
   opacity: 1;
 }
 
-/*fait disparaitre le .far au hover pour éviter une légère bordure noire*/
-.far:hover {
-  opacity: 0;
+.menus-restau {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f6f6f6;
+}
+
+.appetizer, .meal, .dessert {
+  padding: 1rem 0px;
+  justify-content: space-between;
+}
+.appetizer h2, .appetizer h3, .appetizer p, .meal h2, .meal h3, .meal p, .dessert h2, .dessert h3, .dessert p {
+  padding-left: 1rem;
+}
+.appetizer .flex-plats, .meal .flex-plats, .dessert .flex-plats {
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
