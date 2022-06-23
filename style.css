@@ -144,6 +144,7 @@ header {
   background-clip: text;
   opacity: 0;
   transition: all 300ms ease-in-out;
+  -webkit-background-clip: text;
 }
 .menus .fas:hover {
   opacity: 1;
@@ -262,6 +263,10 @@ footer .footer-flex {
   }
 }
 
+.page h3, .page h4, .page p {
+  margin: 0px;
+  padding: 0px;
+}
 .page img {
   max-width: 100%;
 }
@@ -306,40 +311,46 @@ footer .footer-flex {
 .page .fas:hover {
   opacity: 1;
 }
-.page .menus-restau {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #f6f6f6;
-  flex-grow: 1;
+.page .menus {
+  display: grid;
+  padding: 0 1rem;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr); /* répete 3 fois une colonne de la même taille*/
 }
-.page .appetizer, .page .meal, .page .dessert {
-  padding: 1rem 0px;
-  flex-grow: 1;
-}
-.page .appetizer h2, .page .appetizer h3, .page .appetizer p, .page .meal h2, .page .meal h3, .page .meal p, .page .dessert h2, .page .dessert h3, .page .dessert p {
-  padding-left: 1rem;
-}
-.page .appetizer h3, .page .meal h3, .page .dessert h3 {
-  padding-top: 1rem;
-}
-.page .appetizer h2, .page .meal h2, .page .dessert h2 {
-  font-weight: normal;
-}
-.page .appetizer p, .page .meal p, .page .dessert p {
-  padding-bottom: 1rem;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-.page .appetizer .flex-plats, .page .meal .flex-plats, .page .dessert .flex-plats {
+.page .menus .menus-category .menu-item {
   background-color: white;
   border-radius: 1rem;
-  margin: 1rem;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 0px;
+  overflow: hidden;
 }
-.page .appetizer .price, .page .meal .price, .page .dessert .price {
-  font-weight: bold;
+.page .menus .menus-category .menu-item:hover .price-checkout {
+  margin-right: 0;
+}
+.page .menus .menus-category .menu-item .price {
+  margin-left: auto;
+  margin-right: 1rem;
   padding-right: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+}
+.page .menus .menus-category .menu-item .price-checkout {
+  background-color: #99E2D0;
+  margin-right: -4.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+@media (max-width: 768px) {
+  .page .menus {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 485px) {
+  .page .menus {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

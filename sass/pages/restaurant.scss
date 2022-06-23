@@ -1,91 +1,101 @@
 @use "../utils/colors.scss";
+
 .page {
-img {
-    max-width: 100%;
-    @media (min-width:410px) {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 410px;
+    h3, h4, p {
+        margin:0px;
+        padding:0px;
     }
-}
+    img {
+        max-width: 100%;
 
-.main_restaurant {
-    position: relative;
-    top:-3.5rem;
-    background-color: transparent;
-}
-.page_h2 {
-    font-style: italic;
-    font-family: 'Shrikhand', cursive;
-    background-color: colors.$white;
-    padding-left:1rem;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    padding-top:1rem;
-    margin-bottom:0px;
-    background-color: colors.$light-gray;
-}
-i {
-    position: absolute;
-    right: 1.5rem;
-    top:1.5rem;
-    font-size: 1.5rem;
-    
-}
-
-.fas {
-    color:transparent;
-    background-image: linear-gradient(colors.$primaire,colors.$secondaire);
-    background-clip: text;
-    opacity: 0;
-    transition: all 300ms ease-in-out;
-    -webkit-background-clip: text;
-
-    &:hover {
-        opacity: 1; 
+        @media (min-width:410px) {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 410px;
+        }
     }
- }
-.menus-restau {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: colors.$light-gray;
-    flex-grow: 1;
-    
-}
-.appetizer, .meal, .dessert {
-    padding:1rem 0px;
-    flex-grow:1;
-    
-    h2, h3, p {
-        padding-left:1rem
-        /*text-decoration: underline colors.$tertiaire;*/
+
+    .main_restaurant {
+        position: relative;
+        top: -3.5rem;
+        background-color: transparent;
     }
-    h3 {
+
+    .page_h2 {
+        font-style: italic;
+        font-family: 'Shrikhand', cursive;
+        background-color: colors.$white;
+        padding-left: 1rem;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
         padding-top: 1rem;
+        margin-bottom: 0px;
+        background-color: colors.$light-gray;
     }
-    h2 {
-        font-weight: normal;
+
+    i {
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem;
+        font-size: 1.5rem;
+
     }
-    p{
-        padding-bottom: 1rem;
-        position:relative;
-        display: flex;
-        justify-content: space-between;
+
+    .fas {
+        color: transparent;
+        background-image: linear-gradient(colors.$primaire, colors.$secondaire);
+        background-clip: text;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+        -webkit-background-clip: text;
+
+        &:hover {
+            opacity: 1;
+        }
     }
-    .flex-plats {
-    background-color: colors.$white;
-    border-radius:1rem;
-    margin:1rem;
-  
-    
-    }
-    .price {
-        font-weight: bold;
-        padding-right: 1rem;
-       
-    }
-    
-}
+   .menus {
+        display: grid;
+        padding: 0 1rem;
+        gap:1rem;
+        grid-template-columns:repeat(3, 1fr) ;/* répete 3 fois une colonne de la même taille*/
+        .menus-category {
+            .menu-item {
+                background-color: colors.$white;
+                border-radius:1rem;
+                display: flex;
+                align-items: flex-end;
+               
+                padding-top:0px;
+                 overflow: hidden;
+                &:hover .price-checkout {
+                    margin-right:0;
+
+                }
+                .price {
+                    margin-left:auto;
+                    margin-right:1rem;
+                    padding-right:1rem;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: flex-end;
+                }
+                .price-checkout {
+                    background-color: colors.$tertiaire;
+                    margin-right:-4.5rem;
+                    
+                    width: 4rem;
+                    height: 4rem;
+                   
+                }
+            }
+        }
+        @media (max-width:768px){
+            grid-template-columns:1fr 1fr;
+       }
+        
+        @media (max-width:485px){
+             grid-template-columns:1fr;
+        }
+   }
 }
