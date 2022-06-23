@@ -280,6 +280,8 @@ img {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   padding-top: 1rem;
+  margin-bottom: 0px;
+  background-color: #f6f6f6;
 }
 
 i {
@@ -305,19 +307,36 @@ i {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #f6f6f6;
+  flex-grow: 1;
 }
 
 .appetizer, .meal, .dessert {
   padding: 1rem 0px;
-  justify-content: space-between;
+  flex-grow: 1;
 }
 .appetizer h2, .appetizer h3, .appetizer p, .meal h2, .meal h3, .meal p, .dessert h2, .dessert h3, .dessert p {
   padding-left: 1rem;
+}
+.appetizer h3, .meal h3, .dessert h3 {
+  padding-top: 1rem;
+}
+.appetizer h2, .meal h2, .dessert h2 {
+  font-weight: normal;
+}
+.appetizer p, .meal p, .dessert p {
+  padding-bottom: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 .appetizer .flex-plats, .meal .flex-plats, .dessert .flex-plats {
   background-color: white;
   border-radius: 1rem;
   margin: 1rem;
+}
+.appetizer .price, .meal .price, .dessert .price {
+  font-weight: bold;
+  padding-right: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
