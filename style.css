@@ -333,9 +333,6 @@ footer .footer-flex {
 .page .menus .menus-category .menu-item:hover .price-checkout {
   margin-right: 0;
 }
-.page .menus .menus-category .menu-item:hover .price {
-  padding-right: 0px;
-}
 .page .menus .menus-category .menu-item .price {
   margin-left: auto;
   margin-right: 1rem;
@@ -350,7 +347,7 @@ footer .footer-flex {
   margin-right: -4.5rem;
   width: 4rem;
   height: 5rem;
-  transition: margin-right 0.8s;
+  transition: margin-right 0.8s ease-in-out;
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
   display: grid;

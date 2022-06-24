@@ -76,13 +76,11 @@
                 overflow: hidden;
                 
                 &:hover .price-checkout {
+                   
                     margin-right:0;
                    
                 }
-                &:hover .price {
-                    padding-right:0px;
-                   
-                }
+             
                 .price {
                     margin-left:auto;
                     margin-right:1rem;
@@ -97,7 +95,7 @@
                     margin-right:-4.5rem;
                     width: 4rem;
                     height: 5rem;
-                    transition: margin-right 0.8s;
+                    transition: margin-right 0.8s ease-in-out;
                     border-top-right-radius:1rem; 
                     border-bottom-right-radius:1rem;
                     display: grid;
@@ -106,7 +104,6 @@
                 }
                 .fa-check {
                     color:colors.$tertiaire;
-                   
                     opacity:1;
                     background: colors.$white;
                     border-radius: 50%;
