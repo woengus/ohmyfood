@@ -1,9 +1,17 @@
 @use "../utils/colors.scss";
+@use "../utils/box-shadow.scss";
 
 .page {
+    header {
+        box-shadow: none;
+    }
     h3, h4, p {
         margin:0px;
         padding:0px;
+    }
+    h4, p {
+        padding-left: 1rem;
+        padding-top: 1rem;
     }
     img {
         max-width: 100%;
@@ -34,7 +42,7 @@
         background-color: colors.$light-gray;
     }
 
-    i {
+    .fa-heart  {
         position: absolute;
         right: 1.5rem;
         top: 1.5rem;
@@ -42,7 +50,7 @@
 
     }
 
-    .fas {
+    .fas.fa-heart {
         color: transparent;
         background-image: linear-gradient(colors.$primaire, colors.$secondaire);
         background-clip: text;
@@ -55,27 +63,31 @@
         }
     }
    .menus {
-        display: grid;
-        padding: 0 1rem;
-        gap:1rem;
-        grid-template-columns:repeat(3, 1fr) ;/* répete 3 fois une colonne de la même taille*/
+       padding: 0 1rem;
         .menus-category {
+            
             .menu-item {
+                @include box-shadow.base-shadow;
                 background-color: colors.$white;
                 border-radius:1rem;
                 display: flex;
-                align-items: flex-end;
-               
                 padding-top:0px;
-                 overflow: hidden;
+                margin-bottom: 1rem;
+                overflow: hidden;
+                
                 &:hover .price-checkout {
                     margin-right:0;
-
+                   
+                }
+                &:hover .price {
+                    padding-right:0px;
+                   
                 }
                 .price {
                     margin-left:auto;
                     margin-right:1rem;
                     padding-right:1rem;
+                    padding-bottom: 1rem;
                     font-weight: bold;
                     display: flex;
                     align-items: flex-end;
@@ -83,19 +95,27 @@
                 .price-checkout {
                     background-color: colors.$tertiaire;
                     margin-right:-4.5rem;
-                    
                     width: 4rem;
-                    height: 4rem;
+                    height: 5rem;
+                    transition: margin-right 0.8s;
+                    border-top-right-radius:1rem; 
+                    border-bottom-right-radius:1rem;
+                    display: grid;
+                    place-items: center;
+                    color:colors.$white;
+                }
+                .fa-check {
+                    color:colors.$tertiaire;
                    
+                    opacity:1;
+                    background: colors.$white;
+                    border-radius: 50%;
+                    height: 1.1rem;
+                    width: 1.1rem;
+                    display: grid;
+                    align-items: center;
                 }
             }
-        }
-        @media (max-width:768px){
-            grid-template-columns:1fr 1fr;
-       }
-        
-        @media (max-width:485px){
-             grid-template-columns:1fr;
         }
    }
 }
