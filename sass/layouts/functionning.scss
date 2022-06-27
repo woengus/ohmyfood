@@ -47,7 +47,6 @@
         font-size: 1rem;
         transition: all 150ms; 
         &:hover {
-            /*@include hover-zoom.zoom;*/
             background-color: colors.$light-purple;
             @include box-shadow.strong-shadow; 
             i {

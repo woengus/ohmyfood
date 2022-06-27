@@ -48,43 +48,41 @@
         margin-bottom: 0px;
         background-color: colors.$light-gray;
     }
-
+   
     .fa-heart  {
         position: absolute;
         right: 1.5rem;
         top: 1.5rem;
         font-size: 1.5rem;
-
     }
 
     .fas.fa-heart {
         color: transparent;
         background-image: linear-gradient(colors.$primaire, colors.$secondaire);
         background-clip: text;
-        opacity: 0;
         transition: all 300ms ease-in-out;
         -webkit-background-clip: text;
-
-        &:hover {
-            opacity: 1;
-      
-        }
+        opacity:0;
+        
     }
     .far.fa-heart {
   
         opacity: 1;
-     
-
-        &:hover {
-            opacity: 0;
       
-        }
+    }
+    .heart-animation:hover {
+        .fas {
+          opacity:1
+      }
+      /*.far {
+        opacity:0;
+      }*/
     }
     
    .menus {
        padding: 0 1rem;
         .menus-category {
-            
+            overflow: hidden; /* overflow hidden sur le parent, puis overflow hidden, white-space:nowrap et text-overflow: ellipsis sur tous les enfants pour que l'effet ... fonctionne*/
             .menu-item {
                 @include box-shadow.base-shadow;
                 background-color: colors.$white;
@@ -93,23 +91,34 @@
                 padding-top:0px;
                 margin: 1rem 0px;
                 overflow: hidden;
-                  
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                .menu-item-description {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    h4 ,p {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
                 &:hover .price-checkout {
                     margin-right:0;
                     .fa-check {
-                      animation: 0.5s 0.3s 1 both rotation
+                      animation: 0.4s 0.3s 1 both rotation
                         }
                 }
-             
-                
                 .price {
                     margin-left:auto;
                     margin-right:1rem;
+                    margin-bottom:-5px;
                     padding-right:1rem;
                     padding-bottom: 1rem;
                     font-weight: bold;
                     display: flex;
                     align-items: flex-end;
+                    padding-top:15px;
                 }
                 .price-checkout {
                     background-color: colors.$tertiaire;
@@ -133,9 +142,6 @@
                     padding-left:1px;
                     display: grid;
                     align-items: center;
-                    
-                   
-                  
                 }
             }
         }

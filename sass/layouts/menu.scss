@@ -3,6 +3,9 @@
 .menus {
     background-color: colors.$light-gray;
     padding-bottom: 2rem;
+    .far:hover {
+       opacity:0;
+    }
 
     .fas {
         color:transparent;
@@ -14,9 +17,7 @@
         &:hover {
             opacity: 1; 
         }
-       
      }
-
     .card {
         height: 12rem;
         min-width: 18rem;
