@@ -263,8 +263,19 @@ footer .footer-flex {
   }
 }
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .page header {
   box-shadow: none;
+}
+.page h3 {
+  font-weight: normal;
 }
 .page h3, .page h4, .page p {
   margin: 0px;
@@ -273,6 +284,9 @@ footer .footer-flex {
 .page h4, .page p {
   padding-left: 1rem;
   padding-top: 1rem;
+}
+.page p {
+  font-size: small;
 }
 .page img {
   max-width: 100%;
@@ -318,6 +332,12 @@ footer .footer-flex {
 .page .fas.fa-heart:hover {
   opacity: 1;
 }
+.page .far.fa-heart {
+  opacity: 1;
+}
+.page .far.fa-heart:hover {
+  opacity: 0;
+}
 .page .menus {
   padding: 0 1rem;
 }
@@ -327,11 +347,14 @@ footer .footer-flex {
   border-radius: 1rem;
   display: flex;
   padding-top: 0px;
-  margin-bottom: 1rem;
+  margin: 1rem 0px;
   overflow: hidden;
 }
 .page .menus .menus-category .menu-item:hover .price-checkout {
   margin-right: 0;
+}
+.page .menus .menus-category .menu-item:hover .price-checkout .fa-check {
+  animation: 0.5s 0.3s 1 both rotation;
 }
 .page .menus .menus-category .menu-item .price {
   margin-left: auto;
@@ -361,6 +384,7 @@ footer .footer-flex {
   border-radius: 50%;
   height: 1.1rem;
   width: 1.1rem;
+  padding-left: 1px;
   display: grid;
   align-items: center;
 }
