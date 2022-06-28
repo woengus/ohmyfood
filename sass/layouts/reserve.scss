@@ -30,13 +30,14 @@
         border: none;
         margin-top: 1.5rem;
         margin-bottom: 4rem;
+        cursor:pointer;
         @include box-shadow.base-shadow; /*utilisation du mixin en utils/box-shadow, ne pas oublier le namespace*/
         transition: all 150ms; /*transition sur tous les éléments au hover*/
+        &:hover {
+            /*transform: scale(1.03);*/
+            @include box-shadow.strong-shadow;
+            opacity: 0.9;
+        }
     }
 
-    button:hover {
-        /*transform: scale(1.03);*/
-        @include box-shadow.strong-shadow;
-        opacity: 0.9;
-    }
 }
