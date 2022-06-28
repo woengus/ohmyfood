@@ -274,6 +274,19 @@ footer .footer-flex {
     transform: rotate(360deg);
   }
 }
+/* apparition progressive et léger décallage de padding*/
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+  }
+  100% {
+    opacity: 1;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
 .page {
   background-color: #f6f6f6;
 }
@@ -395,8 +408,36 @@ footer .footer-flex {
 .page .menus .menus-category {
   overflow: hidden; /* overflow hidden sur .menus-category,.menu-item et menu-item-description, puis overflow hidden, white-space:nowrap et text-overflow: ellipsis sur  les h4 et p pour que l'effet ... fonctionne*/
 }
+.page .menus .menus-category .delay1 {
+  animation: appearance 1s; /*apparition du menu au chargement*/
+}
+.page .menus .menus-category .delay2 {
+  animation: appearance 1.5s;
+}
+.page .menus .menus-category .delay3 {
+  animation: appearance 2s;
+}
+.page .menus .menus-category .delay4 {
+  animation: appearance 2.5s;
+}
+.page .menus .menus-category .delay5 {
+  animation: appearance 3s;
+}
+.page .menus .menus-category .delay6 {
+  animation: appearance 3.5s;
+}
+.page .menus .menus-category .delay7 {
+  animation: appearance 4s;
+}
+.page .menus .menus-category .delay8 {
+  animation: appearance 4.5s;
+}
+.page .menus .menus-category .delay9 {
+  animation: appearance 5s;
+}
 .page .menus .menus-category .menu-item {
   box-shadow: 0px 3px 3px 1px #e8e8e8;
+  /*boucle pour l'animation de chaque menu*/
   background-color: white;
   border-radius: 1rem;
   display: flex;

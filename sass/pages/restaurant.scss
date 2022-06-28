@@ -129,8 +129,38 @@
        padding: 0 1rem;
         .menus-category {
             overflow: hidden; /* overflow hidden sur .menus-category,.menu-item et menu-item-description, puis overflow hidden, white-space:nowrap et text-overflow: ellipsis sur  les h4 et p pour que l'effet ... fonctionne*/
+            .delay1 {
+                animation: appearance 1s; /*apparition du menu au chargement*/
+            }
+            .delay2 {
+                animation: appearance 1.5s; 
+            }
+            .delay3 {
+                animation: appearance 2s; 
+            }
+            .delay4 {
+                animation: appearance 2.5s; 
+            }
+            .delay5 {
+                animation: appearance 3s; 
+            }
+            .delay6 {
+                animation: appearance 3.5s; 
+            }
+            .delay7 {
+                animation: appearance 4s; 
+            }
+            .delay8 {
+                animation: appearance 4.5s; 
+            }
+            .delay9 {
+                animation: appearance 5s; 
+            }
             .menu-item {
+                
                 @include box-shadow.low-shadow;
+                /*boucle pour l'animation de chaque menu*/
+               
                 background-color: colors.$white;
                 border-radius:1rem;
                 display: flex;

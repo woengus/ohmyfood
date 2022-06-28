@@ -1,8 +1,21 @@
-    @keyframes rotation {
-        0% {
-            transform: rotate(0);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+       }
+       100% {
+        transform: rotate(360deg);
     }
+}
+/* apparition progressive et léger décallage de padding*/
+@keyframes appearance {
+    0% {
+        opacity: 0;
+        padding-bottom: 0.3rem;
+        padding-top: 0.3rem;
+    }
+    100% {
+        opacity: 1;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+}
