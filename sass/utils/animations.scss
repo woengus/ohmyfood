@@ -20,11 +20,9 @@
 /*loader*/
 @keyframes loader {
     0% {
-        /*transform: scale(1);*/
         opacity: 1;
     }
     100% {
-        /*transform: scale(0);*/
         opacity: 0;
         z-index: -1; /*sinon le loader empêche le hover/click des éléments de la page*/
     }
