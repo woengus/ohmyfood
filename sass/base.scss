@@ -18,7 +18,7 @@ main {
     z-index: 2; /*pour passer par dessus tous les éléments du dom*/
     position:fixed; /*pour que si on scrolle en bas de page on ne voit pas les éléments affichés*/
     inset:0; /*raccourci css pour mettre la même valeur à top left bottom et right*/
-    animation: loader 5s;
+    animation: loader 3s;
     animation-fill-mode: forwards;
 }
 /*partie graphique du loader, base récupérée sur https://codepen.io/WebDevSimplified/pen/XPPJjG*/
