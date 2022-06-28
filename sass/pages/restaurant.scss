@@ -59,10 +59,7 @@
         margin:0px;
         padding:0px;
     }
-    h4, p {
-        padding-left: 1rem;
-        padding-top: 1rem;
-    }
+   
     p {
         font-size: small;
     }
@@ -91,6 +88,7 @@
         border-top-left-radius: 2rem;
         border-top-right-radius: 2rem;
         padding-top: 1rem;
+        padding-bottom:1rem;
         margin-bottom: 0px;
         background-color: colors.$light-gray;
     }
@@ -129,8 +127,9 @@
        padding: 0 1rem;
         .menus-category {
             overflow: hidden; /* overflow hidden sur .menus-category,.menu-item et menu-item-description, puis overflow hidden, white-space:nowrap et text-overflow: ellipsis sur  les h4 et p pour que l'effet ... fonctionne*/
+            /*apparition du menu au chargement avec timing différent pour chaque menu*/
             .delay1 {
-                animation: appearance 1s; /*apparition du menu au chargement*/
+                animation: appearance 1s; 
             }
             .delay2 {
                 animation: appearance 1.5s; 
@@ -156,6 +155,9 @@
             .delay9 {
                 animation: appearance 5s; 
             }
+            .delay10 {
+                animation: appearance 5.5s; 
+            }
             .menu-item {
                 
                 @include box-shadow.low-shadow;
@@ -174,7 +176,10 @@
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
+                        padding-left: 1rem;
+                        padding-top: 1rem;
                     }
+                    
                 }
                 &:hover .price-checkout {
                     margin-right:0;
