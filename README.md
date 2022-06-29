@@ -36,8 +36,9 @@ Cela fait apparaître une petite coche à droite du plat. Cette coche devra coul
 
  npm install (vérifier que le dossier node_modules éxiste ainsi que package-lock.json)
 
+ pour utiliser sass: npm install -g sass
+ 
  npm run sass (Pour que les fichiers scss et css soient mis à jour automatiquement et en même temps, création d'un script: sass --watch style.scss style.css)
 
- pour utiliser sass: npm install -g sass
 
  

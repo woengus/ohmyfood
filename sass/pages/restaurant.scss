@@ -160,9 +160,7 @@
             }
             .menu-item {
                 
-                @include box-shadow.low-shadow;
-                /*boucle pour l'animation de chaque menu*/
-               
+                @include box-shadow.low-shadow; 
                 background-color: colors.$white;
                 border-radius:1rem;
                 display: flex;
